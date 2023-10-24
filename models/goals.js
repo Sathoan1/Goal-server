@@ -5,11 +5,13 @@ const goalSchema = new Schema({
     title: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        trim: true
     },
     description: {
         type: String,
         required :true,
+        trim: true
     },
     progress: {
         type: Number,
