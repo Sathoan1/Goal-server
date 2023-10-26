@@ -3,10 +3,12 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const PORT =  process.env.PORT ||5000;
+const cors = require('cors')
 const goalRouter = require('./routes/goalRouter')
 
 //middleware
 app.use(express.json());
+app.use(cors());
 
 //routes
 app.use('/api/goals', goalRouter)
